@@ -1,0 +1,58 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+
+body { background: #f0f4f8; }
+
+/* Окно авторизации */
+.login-box {
+    width: 360px;
+    margin: 120px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    text-align: center;
+}
+.login-box h1 { color: #2c5f8a; font-size: 24px; margin-bottom: 6px; }
+.login-box h2 { color: #555; font-size: 18px; margin-bottom: 20px; }
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background: #2c5f8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.login-box button:hover { background: #1e4466; }
+#errorMsg { color: #c0392b; margin-top: 12px; font-size: 14px; }
+
+/* Главная страница */
+header {
+    background: #2c5f8a;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-info span { margin-right: 15px; }
+.user-info button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background: white;
+    color: #2c5f8a;
+    cursor: pointer;
+    font-weight: bold;
+}
+main { padding: 30px; }
+main h2 { color: #2c5f8a; margin-bottom: 12px; }

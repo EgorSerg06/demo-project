@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная — Книжный магазин</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Книжный магазин</h1>
+        <div class="user-info">
+            <span id="userName"></span>
+            <button id="logoutBtn">Выйти</button>
+        </div>
+    </header>
+    <main>
+        <h2>Главная страница</h2>
+        <p id="welcomeText"></p>
+        <!-- Здесь позже будет список товаров, заказов и т.д. -->
+    </main>
+    <script>
+        // Если не авторизован — вернуть на страницу входа
+        const user = JSON.parse(sessionStorage.getItem('user'));
+        if (!user) {
+            window.location.href = 'index.html';
+        } else {
+            document.getElementById('userName').textContent =
+                user.fio + ' (' + user.role_name + ')';
+            document.getElementById('welcomeText').textContent =
+                'Добро пожаловать, ' + user.fio + '! Ваша роль: ' + user.role_name;
+        }
+        document.getElementById('logoutBtn').onclick = () => {
+            sessionStorage.removeItem('user');
+            window.location.href = 'index.html';
+        };
+    </script>
+</body>
+</html>
